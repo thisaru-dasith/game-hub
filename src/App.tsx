@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
+import GameGrid from "./components/GameGrid";
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
             Sidebar
           </GridItem>
         </Show>
-        <GridItem area={"main"} bg={"blue"}>
-          Main
+        <GridItem area={"main"}>
+          <GameGrid></GameGrid>
         </GridItem>
       </Grid>
     </>
