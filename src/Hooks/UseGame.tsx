@@ -27,6 +27,7 @@ function UseGame() {
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
+    //api.rawg.io/api
     const controller = new AbortController();
     setLoading(true);
     ClinetApi.get<FetchGamesResponse>("/games", { signal: controller.signal })

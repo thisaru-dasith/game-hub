@@ -8,7 +8,7 @@ interface Props {
 function GameCardContainer({ children }: Props) {
   return (
     <>
-      <Box width="300px" radioGroup="10" overflow="hidden">
+      <Box width="300px" radioGroup="10">
         {children}
       </Box>
     </>
