@@ -10,7 +10,7 @@ interface Props {
 function GameGard({ game }: Props) {
   return (
     <>
-      <Card width="300px" radioGroup="10" overflow="hidden">
+      <Card>
         <Image src={game.background_image} />
         <CardBody>
           <Heading size="5*2">{game.name}</Heading>
