@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import ClinetApi from "../Services/Clinet-api";
 import { CanceledError } from "axios";
+import { Spinner } from "@chakra-ui/react";
 
-interface Genre {
+export interface Genre {
   id: number;
   name: string;
   image_background: string;
@@ -35,7 +36,7 @@ function UseGenre() {
     return () => controller.abort();
   }, []);
 
-  return { genres, error };
+  return { genres, error, isLoading };
 }
 
 export default UseGenre;
