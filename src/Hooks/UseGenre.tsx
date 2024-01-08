@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import ClinetApi from "../Services/Clinet-api";
+import { CanceledError } from "axios";
 
 interface Genre {
   id: number;
   name: string;
+  image_background: string;
 }
 
 interface FetchGenreResponse {
@@ -25,6 +27,7 @@ function UseGenre() {
         setGenre(res.data.results);
       })
       .catch((err) => {
+        if (err instanceof CanceledError) return;
         setLoading(false);
         setError(err.message);
       });
