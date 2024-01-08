@@ -53,5 +53,4 @@ function UseGame(selectedGenre: Genre | null, deps?: any[]) {
 
   return { games, error, isLoading };
 }
-
 export default UseGame;
